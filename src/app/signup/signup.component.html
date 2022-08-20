@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>User Signup</h1>
+        <form #form="ngForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="">UserName</label>
+            <input type="text" name="UserName" [(ngModel)]="usersignup.UserName">
+          </div>
+          <div class="form-group">
+            <label for="">UserType</label>
+            <input type="text" name="UserType" [(ngModel)]="usersignup.UserType">
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="text" name="Password" [(ngModel)]="usersignup.Password">
+          </div>
+          <div class="form-group">
+            <button>Save</button>
+          </div>
+        </form>
+      </div>
+     
