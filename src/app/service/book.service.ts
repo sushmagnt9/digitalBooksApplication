@@ -8,16 +8,16 @@ import { Book } from '../models/bookmodel';
 })
 export class bookService {
 
-  baseUrl = 'https://localhost:44370/api/Book';
+  baseUrl = 'https://localhost:7030/Book';
 
   constructor(private http: HttpClient) { }
 
-  //Get all cards
+  //Get all books
   getAllBooks():Observable<Book[]>{
       return this.http.get<Book[]>(this.baseUrl);
   }
 
-  //Add Card
+  //Add book
   addBook(book: Book):Observable<Book> {
     book.id = '00000000-0000-0000-0000-000000000000';
     return this.http.post<Book>(this.baseUrl, book);
