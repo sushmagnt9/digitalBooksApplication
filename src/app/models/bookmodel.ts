@@ -1,11 +1,12 @@
 export interface Book{
-id:number,
+BookId:number | null,
 logo:string,
 BookTitle:string,
+UserId: number | null,
 Category:string,
 Price:string,
 Publisher:string,               
-PublishedDate:string,                 
+PublishedDate:Date,                 
 Content:string,           
-Active:string 
+Active:boolean 
 }

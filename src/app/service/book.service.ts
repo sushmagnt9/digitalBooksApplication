@@ -20,7 +20,7 @@ export class bookService {
 
   //Add book
   CreateBook(book: Book):Observable<Book[]> {
-   book.id = 0;//'00000000-0000-0000-0000-00000000000';
+   book.BookId = 0;//'00000000-0000-0000-0000-00000000000';
     return this.http.post<Book[]>(this.baseUrl1, book);
   }
 
@@ -29,6 +29,6 @@ export class bookService {
   }
 
   updateBook(book: Book):Observable<Book>{
-    return this.http.put<Book>(this.baseUrl +'/'+book.id,book);
+    return this.http.put<Book>(this.baseUrl +'/'+book.BookId,book);
   }
 }

@@ -11,14 +11,15 @@ export class BooksComponent implements OnInit {
   title = 'books';
   books:Book[] = [];
   book : Book = {
-    id:0,
+    BookId:0,
     logo:'',
     BookTitle:'',
+    UserId: null,
     Category:'',
     Price:'',
     Publisher:'',
-    PublishedDate:'',
-    Active:'',
+    PublishedDate:new Date(),
+    Active:true,
     Content:''
   }
 
@@ -37,22 +38,11 @@ export class BooksComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.book.id == 0){
+    if(this.book.BookId == 0){
       this.bookService.CreateBook(this.book)
       .subscribe(
         response => {
-          this.getAllBooks();
-          this.book = {
-            id:0,
-            logo:'',
-            BookTitle:'',
-            Price:'',
-            Category:'',
-            Publisher:'',
-            PublishedDate:'',
-            Content:'',
-            Active:''
-          };
+          console.log(response);
         }
       );
     }
