@@ -11,11 +11,11 @@ export class BooksComponent implements OnInit {
   title = 'books';
   books:Book[] = [];
   book : Book = {
-    id:'',
+    id:0,
+    logo:'',
     BookTitle:'',
     Category:'',
     Price:'',
-    UserId:'',
     Publisher:'',
     PublishedDate:'',
     Active:'',
@@ -37,15 +37,15 @@ export class BooksComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.book.id === ''){
-      this.bookService.addBook(this.book)
+    if(this.book.id == 0){
+      this.bookService.CreateBook(this.book)
       .subscribe(
         response => {
           this.getAllBooks();
           this.book = {
-            id:'',
+            id:0,
+            logo:'',
             BookTitle:'',
-            UserId:'',
             Price:'',
             Category:'',
             Publisher:'',

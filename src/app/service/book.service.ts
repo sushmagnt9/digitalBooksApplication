@@ -9,6 +9,7 @@ import { Book } from '../models/bookmodel';
 export class bookService {
 
   baseUrl = 'https://localhost:7030/Book';
+  baseUrl1 = 'https://localhost:7030/Book/CreateBook'
 
   constructor(private http: HttpClient) { }
 
@@ -18,9 +19,9 @@ export class bookService {
   }
 
   //Add book
-  addBook(book: Book):Observable<Book> {
-    book.id = '00000000-0000-0000-0000-000000000000';
-    return this.http.post<Book>(this.baseUrl, book);
+  CreateBook(book: Book):Observable<Book[]> {
+   book.id = 0;//'00000000-0000-0000-0000-00000000000';
+    return this.http.post<Book[]>(this.baseUrl1, book);
   }
 
   deleteBook(id:string):Observable<Book>{

@@ -8,6 +8,10 @@
             <input type="text" name="bookName" [(ngModel)]="book.BookTitle">
           </div>
           <div class="form-group">
+            <label for="">logo</label>
+            <input type="text" name="logo" [(ngModel)]="book.logo">
+          </div>
+          <div class="form-group">
             <label for="">category</label>
             <input type="text" name="category" [(ngModel)]="book.Category">
           </div>
@@ -18,6 +22,10 @@
           <div>
             <label for="">Publisher</label>
             <input type="text" name="publisher" [(ngModel)]="book.Publisher">
+          </div>
+          <div>
+            <label for="">PublishedDate</label>
+            <input type="text" name="publisher" [(ngModel)]="book.PublishedDate">
           </div>
           <div>
             <label for="">Active</label>
@@ -38,7 +46,7 @@
             <span>{{ book.BookTitle }}</span>
             <span>{{ book.Category }}</span>
           </div>
-          <div class="book-row-action">
-            <a (click)="deleteBook(book.id)"><i class="fa-solid fa-trash"></i></a>
-          </div>
+          <!-- /*<div class="book-row-action"> -->
+            <!-- <a (click)="deleteBook(book.id)"><i class="fa-solid fa-trash"></i></a> -->
+          <!-- </div>*/ -->
         

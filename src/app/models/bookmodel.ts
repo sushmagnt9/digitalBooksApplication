@@ -1,9 +1,9 @@
 export interface Book{
-id:string,
+id:number,
+logo:string,
 BookTitle:string,
 Category:string,
 Price:string,
-UserId:string,
 Publisher:string,               
 PublishedDate:string,                 
 Content:string,           
