@@ -14,7 +14,8 @@ export class SignupComponent implements OnInit {
     UserId:0,
     UserName:'',
     Password:'',
-    UserType:''
+    UserType:'',
+    UserEmail:''
     
   }
 

@@ -1,7 +1,14 @@
-<nav>
-    <h1>DigitalBooksApplication</h1>
-    <a routerLink = "Signin" routerLinkActive="active">Login</a>
-    <a routerLink =  "Signup">Signup</a>
-    <a routerLink = "Books">CreateBooks</a>
-</nav>
+<head>
+    <style>
+        h1 {text-align: center;}
+    </style>
+</head>
+<body>
+    <h1 class ="bg-dark text-success">DigitalBooksApplication</h1>
+    <nav>
+        <div class="col-md-4 text-center"> <a routerLink = "Signin" routerLinkActive="active">Login</a></div>
+        <div class="col-md-4 text-center"><a routerLink =  "Signup">Signup</a></div>
+        <div class="col-md-4 text-center"><a routerLink = "Books">CreateBooks</a></div>
+    </nav>
+</body>
 <router-outlet></router-outlet>
