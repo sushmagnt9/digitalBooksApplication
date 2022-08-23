@@ -8,6 +8,7 @@ import { signinService } from '../service/signin.service';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
+  val : string | null ="noValue";
   title = 'users';
   users:User[] = [];
   user : User = {
@@ -19,6 +20,12 @@ export class SigninComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.val=localStorage.getItem("SomeVariable");
+  }
+
+  getData()
+  {
+    console.info(this.val);
   }
   onSubmit() {
     if(this.user.UserName!=''&& this.user.Password!='' ){

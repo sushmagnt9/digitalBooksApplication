@@ -9,7 +9,7 @@ import { Book } from '../models/bookmodel';
 export class bookService {
 
   baseUrl = 'https://localhost:7030/Book';
-  baseUrl1 = 'https://localhost:7030/Book/CreateBook'
+  baseUrl1 = 'https://localhost:7030/Book/CreateBook';
 
   constructor(private http: HttpClient) { }
 
