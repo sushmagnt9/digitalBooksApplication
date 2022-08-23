@@ -17,20 +17,19 @@ export class PaymentComponent implements OnInit {
     BookId:0,
     PaymentDate:new Date()
   }
-  constructor() { }
+  constructor(private paymentService : paymentService) { }
 
   ngOnInit(): void {
   }
   onSubmit(): void {
-    if(this.payment.Email!='' ){
-
-      this.paymentService.CreatePayment(this.payment)
-      .subscribe(
-        response => {
-          console.log(response);
-          
-        }
-      )
+    if(this.payment.Email!=''  ){
+        this.paymentService.CreatePayment(this.payment)
+        .subscribe(
+          response => {
+            console.log(response);
+            
+          }
+        )
       }else{
         console.log('Payment failed');
       }

@@ -9,6 +9,7 @@ import { SigninComponent } from './signin/signin.component';
 import { BooksComponent } from './books/books.component';
 import { SignupComponent } from './signup/signup.component';
 import { PaymentComponent } from './payment/payment.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PaymentComponent } from './payment/payment.component';
     SigninComponent,
     BooksComponent,
     SignupComponent,
-    PaymentComponent
+    PaymentComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
