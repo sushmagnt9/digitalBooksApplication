@@ -8,8 +8,8 @@ import { Payment } from '../models/payment';
 })
 export class paymentService {
 
-  baseUrl = 'https://localhost:7030/Book';
-  baseUrl1 = 'https://localhost:7030/BPayment/CreatePayment';
+  baseUrl = 'https://localhost:7030/Payment';
+  baseUrl1 = 'https://localhost:7030/Payment/CreatePayment';
 
   constructor(private http: HttpClient) { }
 
