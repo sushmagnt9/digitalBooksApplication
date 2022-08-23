@@ -1,54 +1,35 @@
-<div class="container">
-    <h1>Create Books</h1>
-    <div class="book-container">
-      <div class="book-form">
-        <form #form="ngForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label for="">Title</label>
-            <input type="text" name="bookName" [(ngModel)]="book.BookTitle">
-          </div>
-          <div class="form-group">
-            <label for="">logo</label>
-            <input type="text" name="logo" [(ngModel)]="book.logo">
-          </div>
-          <div class="form-group">
-            <label for="">category</label>
-            <input type="text" name="category" [(ngModel)]="book.Category">
-          </div>
-          <div class="form-group">
-            <label for="">UserId</label>
-            <input type="text" name="UserId" [(ngModel)]="book.UserId">
-          </div>
-          <div>
-            <label for="">Price</label>
-            <input type="text" name="price" [(ngModel)]="book.Price">
-          </div>
-          <div>
-            <label for="">Publisher</label>
-            <input type="text" name="publisher" [(ngModel)]="book.Publisher">
-          </div>
-          <div>
-            <label for="">PublishedDate</label>
-            <input type="text" name="PublishedDate" [(ngModel)]="book.PublishedDate">
-          </div>
-          <div>
-            <label for="">Active</label>
-            <input type="text" name="Active" [(ngModel)]="book.Active">
-          </div>
-          <div>
-            <label for="">Content</label>
-            <input type="text" name="Content" [(ngModel)]="book.Content">
-          </div>
-          <div class="form-group">
-            <button>Save</button>
-          </div>
-        </form>
-      </div>
-      <!-- <div class="books-grid">
-        <div class="book-row" *ngFor="let book of books">
-          <div class="book-row-details" (click)="populateForm(book)">
-            <span>{{ book.BookTitle }}</span>
-            <span>{{ book.Category }}</span>
-          </div> -->
-          
-        
+<div class="card-body">
+  <div class="table-responsive">
+      <table class="table" >
+          <thead class="table-dark">
+              <tr>
+                  <th>BookId</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Publisher</th>
+                  <th>Price</th>
+                  <th>Published Date</th>
+                  <th>Category</th>
+                  <th>Edit</th>
+              </tr>
+          </thead>    
+          <tbody>
+              <tr *ngFor='let book of books'>
+                  <td>{{book.BookId}}</td>
+                  <td>{{book.logo}}</td>
+                  <td>{{book.BookTitle}}</td>
+                  <td>{{book.UserId}}</td>
+                  <td>{{book.Category}}</td>
+                  <td>{{book.Price}}</td>
+                  <td>{{book.Publisher}}</td>
+                  <td>{{book.PublishedDate}}</td>
+                  <td>{{book.Category}}</td>
+                  <td>{{book.Content}}</td>
+                  <td>{{book.Active}}</td>
+                  <td><a  routerLink="/Books" >GetBooks</a></td>
+              </tr>
+          </tbody>        
+      </table>
+  </div>
+ 
+</div>

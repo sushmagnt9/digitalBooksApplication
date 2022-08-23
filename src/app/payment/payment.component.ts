@@ -12,8 +12,8 @@ export class PaymentComponent implements OnInit {
   payments:Payment[] = [];
   payment : Payment = {
     PaymentId:0,
-    Email:'',
-    UserId:0,
+    BuyerEmail:'',
+    BuyerName:'',
     BookId:0,
     PaymentDate:new Date()
   }
@@ -22,7 +22,7 @@ export class PaymentComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(): void {
-    if(this.payment.Email!=''  ){
+    if(this.payment.BuyerEmail!=''  ){
         this.paymentService.CreatePayment(this.payment)
         .subscribe(
           response => {
