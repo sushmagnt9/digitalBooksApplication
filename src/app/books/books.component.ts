@@ -12,10 +12,11 @@ export class BooksComponent implements OnInit {
   books:Book[] = [];
   book : Book = {
     BookId:0,
-    logo:'',
-    BookTitle:'',
+    Logo:'',
+    Title:'',
     UserId: null,
     Category:'',
+    AuthorName:'',
     Price:'',
     Publisher:'',
     PublishedDate:new Date(),

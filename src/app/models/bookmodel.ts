@@ -1,9 +1,10 @@
 export interface Book{
 BookId:number | null,
-logo:string,
-BookTitle:string,
+Logo:string,
+Title:string,
 UserId: number | null,
 Category:string,
+AuthorName : string,
 Price:string,
 Publisher:string,               
 PublishedDate:Date,                 

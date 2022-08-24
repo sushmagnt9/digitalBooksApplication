@@ -8,7 +8,7 @@ import { User } from '../models/signinpage';
 })
 export class signinService{
 
-  baseUrl = 'https://localhost:7190/Authentication';
+  baseUrl = 'https://localhost:7190/Authentication/validate';
 
   constructor(private http: HttpClient) { }
 
