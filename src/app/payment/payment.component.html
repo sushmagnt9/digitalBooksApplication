@@ -7,11 +7,15 @@
           </div>
           <div class="form-group">
             <label for="">BuyerName</label>
-            <input type="password" name="BuyerName" [(ngModel)]="payment.BuyerName">
+            <input type="text" name="BuyerName" [(ngModel)]="payment.BuyerName">
+          </div>
+          <div class="form-group">
+            <label for="">BookId</label>
+            <input type="text" name="BookId" [(ngModel)]="payment.BookId">
           </div>
           <div class="form-group">
             <label for="">PaymentDate</label>
-            <input type="password" name="PaymentDate" [(ngModel)]="payment.PaymentDate">
+            <input type="date" name="PaymentDate" [(ngModel)]="payment.PaymentDate">
           </div>
           <div class="form-group">
             <button>Save</button>

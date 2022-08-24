@@ -3,19 +3,21 @@
       <table class="table" >
           <thead class="table-dark">
               <tr>
-                  <th>BookId</th>
-                  <th>Title</th>
-                  <th>Author</th>
-                  <th>Publisher</th>
+                  
+                  <th>logo</th>
+                  <th>BookTitle</th>
+                  <th>UserId</th>
+                  <th>Category</th>
                   <th>Price</th>
+                  <th>Publisher</th>
                   <th>Published Date</th>
                   <th>Category</th>
-                  <th>Edit</th>
+                  <th>Content</th>
+                  <th>Active</th>
               </tr>
           </thead>    
           <tbody>
               <tr *ngFor='let book of books'>
-                  <td>{{book.BookId}}</td>
                   <td>{{book.logo}}</td>
                   <td>{{book.BookTitle}}</td>
                   <td>{{book.UserId}}</td>
@@ -26,7 +28,7 @@
                   <td>{{book.Category}}</td>
                   <td>{{book.Content}}</td>
                   <td>{{book.Active}}</td>
-                  <td><a  routerLink="/Books" >GetBooks</a></td>
+                  <td><a  routerLink="/Books" >getAllBooks</a></td>
               </tr>
           </tbody>        
       </table>
