@@ -10,19 +10,19 @@ import { bookService } from '../service/book.service';
 export class BooksComponent implements OnInit {
   title = 'books';
   books:Book[] = [];
-  book : Book = {
-    BookId:0,
-    Logo:'',
-    Title:'',
-    UserId: null,
-    Category:'',
-    AuthorName:'',
-    Price:'',
-    Publisher:'',
-    PublishedDate:new Date(),
-    Active:true,
-    Content:''
-  }
+  // book : Book = {
+  //   BookId:0,
+  //   Logo:'',
+  //   Title:'',
+  //   UserId: null,
+  //   Category:'',
+  //   AuthorName:'',
+  //   Price:'',
+  //   Publisher:'',
+  //   PublishedDate:new Date(),
+  //   Active:true,
+  //   Content:''
+  // }
 
   constructor(private bookService : bookService){
   }
@@ -38,41 +38,41 @@ export class BooksComponent implements OnInit {
     );
   }
 
-  onSubmit(){
-    if(this.book.BookId == 0){
-      this.bookService.CreateBook(this.book)
-      .subscribe(
-        response => {
-          console.log(response);
-        }
-      );
-    }
-    else{
-      this.updateBook(this.book);
-    }    
-  }
+  // onSubmit(){
+  //   if(this.books.BookId == 0){
+  //     this.bookService.CreateBook(this.books)
+  //     .subscribe(
+  //       response => {
+  //         console.log(response);
+  //       }
+  //     );
+  //   }
+  //   else{
+  //     this.updateBook(this.book);
+  //   }    
+  // }
 
-  deleteBook(id:string){
-    this.bookService.deleteBook(id)
-    .subscribe(
-      response => {
-        this.getAllBooks();
-      }
-    )
-  }
+  // deleteBook(id:string){
+  //   this.bookService.deleteBook(id)
+  //   .subscribe(
+  //     response => {
+  //       this.getAllBooks();
+  //     }
+  //   )
+  // }
 
-  populateForm(book: Book){
-    this.book = book;
+  // populateForm(book: Book){
+  //   this.book = book;
 
-  }
+  // }
   
-  updateBook(book: Book){
-    this.bookService.updateBook(book)
-    .subscribe(
-      response => {
-        this.getAllBooks();
-      }
-    )
-  }
+  // updateBook(book: Book){
+  //   this.bookService.updateBook(book)
+  //   .subscribe(
+  //     response => {
+  //       this.getAllBooks();
+  //     }
+  //   )
+  // }
 
 }

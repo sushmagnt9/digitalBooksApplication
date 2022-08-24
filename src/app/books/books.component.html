@@ -1,40 +1,36 @@
-<div class="card-body">
-  <div class="table-responsive">
-      <table class="table" >
-          <thead class="table-dark">
+<div class='table-responsive'>
+      <table class='table'>
+          <thead>
               <tr>
-                  <th>BookId</th>
-                  <th>Logo</th>
-                  <th>Title</th>
-                  <th>UserId</th>
-                  <th>Category</th>
-                  <th>AuthorName</th>
-                  <th>Price</th>
-                  <th>Publisher</th>
-                  <th>Published Date</th>
-                  <th>Category</th>
-                  <th>Content</th>
-                  <th>Active</th>
+                  <th>bookId</th>
+                  <th>logo</th>
+                  <th>title</th>
+                  <th>category</th>
+                  <th>authorName</th>
+                  <th>price</th>
+                  <th>publisher</th>
+                  <th>published Date</th>
+                  <th>category</th>
+                  <th>content</th>
+                  <th>active</th>
               </tr>
           </thead>    
           <tbody>
               <tr *ngFor='let book of books'>
-                  <td>{{book.BookId}}</td>
-                  <td>{{book.Logo}}</td>
-                  <td>{{book.Title}}</td>
-                  <td>{{book.UserId}}</td>
-                  <td>{{book.Category}}</td>
-                  <td>{{book.AuthorName}}</td>
-                  <td>{{book.Price}}</td>
-                  <td>{{book.Publisher}}</td>
-                  <td>{{book.PublishedDate}}</td>
-                  <td>{{book.Category}}</td>
-                  <td>{{book.Content}}</td>
-                  <td>{{book.Active}}</td>
+                  <td>{{book.bookId}}</td>
+                  <td>{{book.logo}}</td>
+                  <td>{{book.title}}</td>
+                  <td>{{book.category}}</td>
+                  <td>{{book.authorName}}</td>
+                  <td>{{book.price}}</td>
+                  <td>{{book.publisher}}</td>
+                  <td>{{book.publishedDate}}</td>
+                  <td>{{book.category}}</td>
+                  <td>{{book.content}}</td>
+                  <td>{{book.active}}</td>
                   <td><a  routerLink="/Books">Books</a></td>
               </tr>
           </tbody>        
       </table>
-  </div>
- 
+  
 </div>
