@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserSignUp } from '../models/signuppage';
 import { signupService } from '../service/signup.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,6 +9,7 @@ import { signupService } from '../service/signup.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  val : string | null ="noValue";
   title = 'usersSignUp';
   users:UserSignUp[] = [];
   usersignup : UserSignUp = {
@@ -19,21 +21,30 @@ export class SignupComponent implements OnInit {
     
   }
 
-  constructor(private signupService : signupService) { }
+  constructor(private signupService : signupService,private router : Router) { }
 
   ngOnInit(): void {
+    this.val=localStorage.getItem("SomeVariable");
   }
+  getData()
+  {
+    console.info(this.val);
+  }
+  response:any;
   onSubmit() {
-    if(this.usersignup.UserName!=''){
-console.log(this.usersignup);
+    
       this.signupService.User(this.usersignup)
       .subscribe(
         response => {
-          console.log(response);
+          this.response = response;
+          if(this.response.UserRole=='Author')
+          {
+            this.router.navigate(['/Books']);
+          }
+          else{
+            this.router.navigate(['/BuyBook'])
+          }
         }
       )
-      }else{
-        console.log('Login failed');
-      }
-  }
+      }     
 }

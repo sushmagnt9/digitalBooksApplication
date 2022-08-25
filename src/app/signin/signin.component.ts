@@ -30,7 +30,6 @@ export class SigninComponent implements OnInit {
   }
   response:any;
   onSubmit() {
-    console.log("display");
     if(this.user.UserName!=''&& this.user.Password!='' ){
 
       this.signinService.validateUser(this.user)
