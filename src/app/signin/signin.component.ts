@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/signinpage';
 import { signinService } from '../service/signin.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -16,7 +17,7 @@ export class SigninComponent implements OnInit {
     UserName:'',
     Password:''
   }
-  constructor(private signinService : signinService){
+  constructor(private signinService : signinService,private router : Router){
   }
 
   ngOnInit(): void {
@@ -27,14 +28,22 @@ export class SigninComponent implements OnInit {
   {
     console.info(this.val);
   }
+  response:any;
   onSubmit() {
+    console.log("display");
     if(this.user.UserName!=''&& this.user.Password!='' ){
 
       this.signinService.validateUser(this.user)
       .subscribe(
         response => {
-          console.log(response);
-          
+          this.response = response;
+          if(this.response.token=='')
+          {
+            alert('Login failed');
+            return;
+          }
+          alert('Login Sucess');
+          this.router.navigate(['/Books']);
         }
       )
       }else{

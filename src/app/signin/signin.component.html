@@ -1,6 +1,6 @@
 <div class="container">
     <h1>User Login</h1>
-        <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <form #form="ngForm">
           <div class="form-group">
             <label for="">UserName</label>
             <input type="text" name="UserName" [(ngModel)]="user.UserName">
@@ -10,7 +10,7 @@
             <input type="password" name="Password" [(ngModel)]="user.Password">
           </div>
           <div class="form-group">
-            <a routerLink="/Books" type="button" class="btn btn-primary">Save</a>
+            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Save</a>
           </div>
         </form>
       </div>
