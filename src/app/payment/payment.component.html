@@ -3,19 +3,19 @@
         <form #form="ngForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="">BuyerEmail</label>
-            <input type="text" name="BuyerEmail" [(ngModel)]="payment.BuyerEmail">
+            <input type="text" name="BuyerEmail" [(ngModel)]="payment.buyerEmail">
           </div>
           <div class="form-group">
             <label for="">BuyerName</label>
-            <input type="text" name="BuyerName" [(ngModel)]="payment.BuyerName">
+            <input type="text" name="BuyerName" [(ngModel)]="payment.buyerName">
           </div>
           <div class="form-group">
             <label for="">BookId</label>
-            <input type="text" name="BookId" [(ngModel)]="payment.BookId">
+            <input type="text" name="BookId" [(ngModel)]="payment.bookId">
           </div>
           <div class="form-group">
             <label for="">PaymentDate</label>
-            <input type="date" name="PaymentDate" [(ngModel)]="payment.PaymentDate">
+            <input type="date" name="PaymentDate" [(ngModel)]="payment.paymentDate">
           </div>
           <div class="form-group">
             <button>Save</button>

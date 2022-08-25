@@ -20,7 +20,7 @@ export class paymentService {
 
   //Add book
   CreatePayment(payment: Payment):Observable<Payment[]> {
-   payment.PaymentId = 0;//'00000000-0000-0000-0000-00000000000';
+   payment.paymentId = 0;//'00000000-0000-0000-0000-00000000000';
     return this.http.post<Payment[]>(this.baseUrl1, payment);
   }
 

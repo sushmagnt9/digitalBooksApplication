@@ -1,0 +1,24 @@
+<div class='table-responsive'>
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>paymentId</th>
+                <th>buyerEmail</th>
+                <th>buyerName</th>
+                <th>bookId</th>
+                <th>paymentDate</th>
+            </tr>
+        </thead>    
+        <tbody>
+            <tr *ngFor='let payment of payments'>
+                <td>{{payment.paymentId}}</td>
+                <td>{{payment.buyerEmail}}</td>
+                <td>{{payment.buyerName}}</td>
+                <td>{{payment.bookId}}</td>
+                <td>{{payment.paymentDate}}</td>
+                <td><a  routerLink="/getpayment">payment</a></td>
+            </tr>
+        </tbody>        
+    </table>
+
+</div>

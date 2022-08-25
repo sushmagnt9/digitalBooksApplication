@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { PaymentComponent } from './payment/payment.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreatebooksComponent } from './createbooks/createbooks.component';
+import { GetpaymentComponent } from './getpayment/getpayment.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CreatebooksComponent } from './createbooks/createbooks.component';
     SignupComponent,
     PaymentComponent,
     NavbarComponent,
-    CreatebooksComponent
+    CreatebooksComponent,
+    GetpaymentComponent
   ],
   imports: [
     BrowserModule,

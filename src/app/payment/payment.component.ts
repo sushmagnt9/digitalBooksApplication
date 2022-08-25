@@ -8,21 +8,21 @@ import { paymentService } from '../service/payment.service';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-  title = 'users';
+  title = 'payment';
   payments:Payment[] = [];
   payment : Payment = {
-    PaymentId:0,
-    BuyerEmail:'',
-    BuyerName:'',
-    BookId:0,
-    PaymentDate:new Date()
+    paymentId:0,
+    buyerEmail:'',
+    buyerName:'',
+    bookId:0,
+    paymentDate:new Date()
   }
   constructor(private paymentService : paymentService) { }
 
   ngOnInit(): void {
   }
   onSubmit(): void {
-    if(this.payment.BuyerEmail!=''  ){
+    if(this.payment.buyerEmail!=''  ){
         this.paymentService.CreatePayment(this.payment)
         .subscribe(
           response => {
