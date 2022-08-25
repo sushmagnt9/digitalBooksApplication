@@ -13,6 +13,7 @@ export class GetpaymentComponent implements OnInit {
   constructor(private paymentService : paymentService) { }
 
   ngOnInit(): void {
+    this.getAllPayment();
   }
   getAllPayment() {
     this.paymentService.getAllPayment()
