@@ -12,6 +12,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreatebooksComponent } from './createbooks/createbooks.component';
 import { GetpaymentComponent } from './getpayment/getpayment.component';
+import { SearchbookComponent } from './searchbook/searchbook.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GetpaymentComponent } from './getpayment/getpayment.component';
     PaymentComponent,
     NavbarComponent,
     CreatebooksComponent,
-    GetpaymentComponent
+    GetpaymentComponent,
+    SearchbookComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ export class bookService {
 
   baseUrl = 'https://localhost:7030/Book';
   baseUrl1 = 'https://localhost:7030/Book/CreateBook';
+  baseUrl2 = 'https://localhost:7030/Book/SearchBooks';
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +24,10 @@ export class bookService {
    book.bookId = 0;//'00000000-0000-0000-0000-00000000000';
     return this.http.post<Book[]>(this.baseUrl1, book);
   }
-
+  //Search books
+  SearchBooks(book: Book):Observable<Book[]>{
+    return this.http.post<Book[]>(this.baseUrl2, book);
+  }
   deleteBook(id:string):Observable<Book>{
     return this.http.delete<Book>(this.baseUrl +'/'+id);
   }
