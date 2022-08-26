@@ -21,7 +21,7 @@ export class bookService {
 
   //Add book
   CreateBook(book: Book):Observable<Book[]> {
-   book.bookId = 0;//'00000000-0000-0000-0000-00000000000';
+  //  book.bookId = 0;//'00000000-0000-0000-0000-00000000000';
     return this.http.post<Book[]>(this.baseUrl1, book);
   }
   //Search books
