@@ -39,10 +39,10 @@ export class SignupComponent implements OnInit {
           this.response = response;
           if(this.response.UserRole=='Author')
           {
-            this.router.navigate(['/Books']);
+            this.router.navigate(['/createbooks']);
           }
           else{
-            this.router.navigate(['/BuyBook'])
+            this.router.navigate(['/Books'])
           }
         }
       )

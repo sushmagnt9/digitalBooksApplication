@@ -29,6 +29,7 @@ export class SigninComponent implements OnInit {
     console.info(this.val);
   }
   response:any;
+  ErrMsg=''
   onSubmit() {
     if(this.user.UserName!=''&& this.user.Password!='' ){
 
@@ -39,6 +40,7 @@ export class SigninComponent implements OnInit {
           if(this.response.token=='')
           {
             alert('Login failed');
+            this.ErrMsg='Login failed';
             return;
           }
           alert('Login Sucess');
