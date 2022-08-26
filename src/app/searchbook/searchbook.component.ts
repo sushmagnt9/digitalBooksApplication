@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../models/bookmodel';
+import { BookSearch } from '../models/booksearch';
 import { bookService } from '../service/book.service';
 
 @Component({
@@ -9,30 +10,29 @@ import { bookService } from '../service/book.service';
 })
 export class SearchbookComponent implements OnInit {
   title = 'books';
-  book : Book = {
-    bookId:0,
-    logo:'',
+  book : BookSearch = {
+    
 title:'',
 category:'',
-price: '',
 authorName : '',
-publisher:'',               
-publishedDate:new Date(),                 
-content:'',           
-active:true,
+publisher:'', 
+content:''              
+
  }
   constructor(private bookService : bookService) { }
 
   ngOnInit(): void {
     
   }
-  onSubmit(){
-      
+  response : any
+  onSubmit():void{
+    
+        
+    
+        debugger;
         this.bookService.SearchBooks(this.book)
         .subscribe(
-          response => {
-            console.log(response);
-           }
-         );
+          response => { this.response = response});
+            
        }
 }

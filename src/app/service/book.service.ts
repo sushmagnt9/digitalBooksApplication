@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Book } from '../models/bookmodel';
+import { BookSearch } from '../models/booksearch';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +26,8 @@ export class bookService {
     return this.http.post<Book[]>(this.baseUrl1, book);
   }
   //Search books
-  SearchBooks(book: Book):Observable<Book[]>{
-    return this.http.post<Book[]>(this.baseUrl2, book);
+  SearchBooks(book: BookSearch):Observable<BookSearch[]>{
+    return this.http.post<BookSearch[]>(this.baseUrl2, book);
   }
   deleteBook(id:string):Observable<Book>{
     return this.http.delete<Book>(this.baseUrl +'/'+id);
