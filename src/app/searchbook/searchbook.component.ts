@@ -26,15 +26,16 @@ content:''
   ngOnInit(): void {
     
   }
+  
   response : any
   onSubmit():void{
-    
-        
-    
+       
         debugger;
         this.bookService.SearchBooks(this.book)
         .subscribe(
           response => { this.response = response})
+          console.log(this.response);
+          
           //  this.router.navigate(['/Books']) ;
        }
 }
