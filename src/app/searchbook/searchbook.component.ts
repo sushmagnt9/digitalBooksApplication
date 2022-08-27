@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from '../models/bookmodel';
 import { BookSearch } from '../models/booksearch';
 import { bookService } from '../service/book.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-searchbook',
@@ -9,7 +10,8 @@ import { bookService } from '../service/book.service';
   styleUrls: ['./searchbook.component.css']
 })
 export class SearchbookComponent implements OnInit {
-  title = 'books';
+  title = 'search books';
+  books: Book[]= [];
   book : BookSearch = {
     
 title:'',
@@ -19,7 +21,7 @@ publisher:'',
 content:''              
 
  }
-  constructor(private bookService : bookService) { }
+  constructor(private bookService : bookService,private router : Router) { }
 
   ngOnInit(): void {
     
@@ -32,7 +34,7 @@ content:''
         debugger;
         this.bookService.SearchBooks(this.book)
         .subscribe(
-          response => { this.response = response});
-            
+          response => { this.response = response})
+          //  this.router.navigate(['/Books']) ;
        }
 }

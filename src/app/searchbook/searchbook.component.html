@@ -22,3 +22,30 @@
           </div>
 </form>
 </div>
+
+<div class="row">
+  <div class="table-responsive" id="divBook">
+      <div class="table-responsive">
+          <table class="table table-striped border" >
+              <thead>
+                  <tr class="table-secondary">
+                      <th>title</th>
+                      <th>category</th>
+                      <th>authorName</th>
+                      <th>Publisher</th>
+                      <th>content</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let book of books">
+                      <td>{{book.title}}</td>
+                      <td>{{book.category}}</td>
+                      <td>{{book.authorName}}</td>
+                      <td>{{book.publisher}}</td>
+                      <td>{{book.content}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
