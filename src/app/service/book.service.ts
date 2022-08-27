@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Book } from '../models/bookmodel';
@@ -12,6 +12,7 @@ export class bookService {
   baseUrl = 'https://localhost:7030/Book';
   baseUrl1 = 'https://localhost:7030/Book/CreateBook';
   baseUrl2 = 'https://localhost:7030/Book/SearchBooks';
+  baseUrl3 = 'https://localhost:7030/Book/bookId';
 
   constructor(private http: HttpClient) { }
 
@@ -27,10 +28,17 @@ export class bookService {
   }
   //Search books
   SearchBooks(book: BookSearch):Observable<BookSearch[]>{
-    return this.http.post<BookSearch[]>(this.baseUrl2, book);
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("title",book.title);
+    queryParams = queryParams.append("category",book.category);
+    queryParams = queryParams.append("author",book.authorName);
+    queryParams = queryParams.append("publisher",book.publisher);
+    queryParams = queryParams.append("content",book.content);
+
+    return this.http.get<Book[]>(this.baseUrl2,{params:queryParams});
   }
-  deleteBook(id:string):Observable<Book>{
-    return this.http.delete<Book>(this.baseUrl +'/'+id);
+  deleteBook(bookId:number):Observable<Book>{
+    return this.http.delete<Book>(this.baseUrl3 +'/'+bookId);
   }
 
   updateBook(book: Book):Observable<Book>{

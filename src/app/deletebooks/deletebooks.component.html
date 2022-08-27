@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Create Books</h1>
+        <form #form="ngForm" >
+         
+          <label for="name"><b>Title</b></label>
+            <input type="text" placeholder="Enter Title" name="Title" [(ngModel)]="book.title">
+         
+            <label for="category"><b>Category</b></label>
+            <input type="text" name="category" placeholder="Enter Category" [(ngModel)]="book.category">
+          
+            <label for="price"><b>Price</b></label>
+            <input type="text" name="price" placeholder="Enter Price" [(ngModel)]="book.price">
+          
+            <label for=""><b>AuthorName</b></label>
+            <input type="text" name="authorName" placeholder="Enter authorName" [(ngModel)]="book.authorName">
+         
+         
+            <label for="publisher"><b>Publisher</b></label>
+            <input type="text" name="price" placeholder="Enter Publisher" [(ngModel)]="book.publisher">
+        
+          
+            <label for=""><b>PublishedDate</b></label>
+            <input type="text" name="PublishedDate" [(ngModel)]="book.publishedDate">
+      
+            <label for="content"><b>Content</b></label>
+            <input type="text" name="content" placeholder="Enter Content" [(ngModel)]="book.content">
+       
+            <label for="active"><b>Active</b></label>
+            <input type="text" name="active" [(ngModel)]="book.active">
+        
+          <div class="form-group">
+            <button>Delete</button>>
+            <!-- <button>Create</button> -->
+          </div>
+
+        </form>
+      </div>
+     

@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CreatebooksComponent } from './createbooks/createbooks.component';
 import { GetpaymentComponent } from './getpayment/getpayment.component';
 import { SearchbookComponent } from './searchbook/searchbook.component';
+import { DeletebooksComponent } from './deletebooks/deletebooks.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SearchbookComponent } from './searchbook/searchbook.component';
     NavbarComponent,
     CreatebooksComponent,
     GetpaymentComponent,
-    SearchbookComponent
+    SearchbookComponent,
+    DeletebooksComponent
   ],
   imports: [
     BrowserModule,
