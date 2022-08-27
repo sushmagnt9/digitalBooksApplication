@@ -1,17 +1,13 @@
 <div class="container">
     <h1>User Login</h1>
-        <form #form="ngForm">
+    
+            <label for="name"><b>UserName</b></label>
+            <input type="text" placeholder="Enter UserName" name="UserName" [(ngModel)]="user.UserName">
+          
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="Password" [(ngModel)]="user.Password">
+          
           <div class="form-group">
-            <label for="">UserName</label>
-            <input type="text" name="UserName" [(ngModel)]="user.UserName">
+            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Login</a>
           </div>
-          <div class="form-group">
-            <label for="">Password</label>
-            <input type="password" name="Password" [(ngModel)]="user.Password">
-          </div>
-          <div class="form-group">
-            <a  (click)="onSubmit()" type="button" class="btn btn-primary">Save</a>
-          </div>
-        </form>
-      </div>
-     
+</div>
