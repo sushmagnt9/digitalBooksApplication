@@ -14,9 +14,13 @@
             <label for=""><b>PaymentDate</b></label>
             <input type="date" name="PaymentDate" [(ngModel)]="payment.paymentDate">
         
-          <div class="form-group">
-            <button>Buy</button>
+
+            <div class="form-group">
+              <a  (click)="onSubmit()" type="button" class="btn btn-primary">Buy</a>
             </div>
+          <!-- <div class="form-group">
+            <button>Buy</button>
+            </div> -->
 
           </form>
           </div>
