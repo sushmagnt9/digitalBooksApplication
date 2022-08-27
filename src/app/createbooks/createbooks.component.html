@@ -1,42 +1,38 @@
 <div class="container">
     <h1>Create Books</h1>
         <form #form="ngForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label for="">Title</label>
-            <input type="text" name="Title" [(ngModel)]="book.title">
-          </div>
-          <div class="form-group">
-            <label for="">Category</label>
-            <input type="text" name="category" [(ngModel)]="book.category">
-          </div>
-          <div class="form-group">
-            <label for="">price</label>
-            <input type="text" name="price" [(ngModel)]="book.price">
-          </div>
-          <div class="form-group">
-            <label for="">authorName</label>
-            <input type="text" name="authorName" [(ngModel)]="book.authorName">
-          </div>
-          <div class="form-group">
-            <label for="">Publisher</label>
-            <input type="text" name="price" [(ngModel)]="book.publisher">
-          </div>
-          <div class="form-group">
-            <label for="">PublishedDate</label>
+         
+          <label for="name"><b>Title</b></label>
+            <input type="text" placeholder="Enter Title" name="Title" [(ngModel)]="book.title">
+         
+            <label for="category"><b>Category</b></label>
+            <input type="text" name="category" placeholder="Enter Category" [(ngModel)]="book.category">
+          
+            <label for="price"><b>Price</b></label>
+            <input type="text" name="price" placeholder="Enter Price" [(ngModel)]="book.price">
+          
+            <label for=""><b>AuthorName</b></label>
+            <input type="text" name="authorName" placeholder="Enter authorName" [(ngModel)]="book.authorName">
+         
+         
+            <label for="publisher"><b>Publisher</b></label>
+            <input type="text" name="price" placeholder="Enter Publisher" [(ngModel)]="book.publisher">
+        
+          
+            <label for=""><b>PublishedDate</b></label>
             <input type="text" name="PublishedDate" [(ngModel)]="book.publishedDate">
-          </div>
-          <div class="form-group">
-            <label for="">content</label>
-            <input type="text" name="content" [(ngModel)]="book.content">
-          </div>
-          <div class="form-group">
-            <label for="">active</label>
+      
+            <label for="content"><b>Content</b></label>
+            <input type="text" name="content" placeholder="Enter Content" [(ngModel)]="book.content">
+       
+            <label for="active"><b>Active</b></label>
             <input type="text" name="active" [(ngModel)]="book.active">
-          </div>
+        
           <div class="form-group">
-            <!-- <a (click)='onSubmit()' href='books'>Save </a> -->
-            <button>Save</button>
+            <a (click)='onSubmit()' href='Books'>Save </a> 
+            <!-- <button>Create</button> -->
           </div>
+
         </form>
       </div>
      
