@@ -1,22 +1,22 @@
 <div class="container">
     <h1>Book Payment</h1>
         <form #form="ngForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label for="">BuyerEmail</label>
-            <input type="text" name="BuyerEmail" [(ngModel)]="payment.buyerEmail">
-          </div>
-          <div class="form-group">
-            <label for="">BuyerName</label>
-            <input type="text" name="BuyerName" [(ngModel)]="payment.buyerName">
-          </div>
-          <div class="form-group">
-            <label for="">BookId</label>
-            <input type="text" name="BookId" [(ngModel)]="payment.bookId">
-          </div>
-          <div class="form-group">
-            <label for="">PaymentDate</label>
+          
+          <label for="Email"><b>BuyerEmail</b></label>
+          <input type="BuyerEmail" placeholder="Enter BuyerEmail" name="BuyerEmail" [(ngModel)]="payment.buyerEmail">
+         
+          <label for="name"><b>BuyerName</b></label>
+          <input type="BuyerName" placeholder="Enter BuyerEmail" name="BuyerName" [(ngModel)]="payment.buyerName">
+         
+          <label for="bookid"><b>BookId</b></label>
+          <input type="BookId" placeholder="Enter BookId" name="BookId" [(ngModel)]="payment.bookId">
+        
+            <label for=""><b>PaymentDate</b></label>
             <input type="date" name="PaymentDate" [(ngModel)]="payment.paymentDate">
-          </div>
+        
           <div class="form-group">
-            <button>Save</button>
+            <button>Buy</button>
             </div>
+
+          </form>
+          </div>
