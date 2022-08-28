@@ -65,36 +65,5 @@ export class BooksComponent implements OnInit {
         this.getAllBooks();
       }
     )
-  }
-
-  // onSubmit(){
-  //   if(this.books.BookId == 0){
-  //     this.bookService.CreateBook(this.books)
-  //     .subscribe(
-  //       response => {
-  //         console.log(response);
-  //       }
-  //     );
-  //   }
-  //   else{
-  //     this.updateBook(this.book);
-  //   }    
-  // }
-
-   
-
-  // populateForm(book: Book){
-  //   this.book = book;
-
-  // }
-  
-  // updateBook(book: Book){
-  //   this.bookService.updateBook(book)
-  //   .subscribe(
-  //     response => {
-  //       this.getAllBooks();
-  //     }
-  //   )
-  // }
-
+  } 
 }
