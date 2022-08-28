@@ -31,19 +31,22 @@ export class SignupComponent implements OnInit {
     console.info(this.val);
   }
   response:any;
+  ErrMsg=''
   onSubmit() {
       debugger;
       this.signupService.User(this.usersignup)
       .subscribe(
         response => {
           this.response = response;
-          if(this.response.UserRole=='Author')
-          {
-            this.router.navigate(['/createbooks']);
-          }
-          else{
-            this.router.navigate(['/Books'])
-          }
+          this.ErrMsg = 'Signup sucess';
+          this.router.navigate(['/Signin'])
+          // if(this.response.UserRole=='Author')
+          // {
+          //   this.router.navigate(['/createbooks']);
+          // }
+          // else{
+          //   this.router.navigate(['/Books'])
+          // }
         }
       )
       }     
