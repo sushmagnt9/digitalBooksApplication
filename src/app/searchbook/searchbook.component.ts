@@ -29,8 +29,6 @@ content:''
   
   response : any
   onSubmit():void{
-       
-        debugger;
         this.bookService.SearchBooks(this.book)
         .subscribe(
           response => { this.response = response})

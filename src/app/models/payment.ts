@@ -2,6 +2,6 @@ export interface Payment{
 paymentId:number,
 buyerEmail : string,
 buyerName : string,
-bookId : number,
+bookId : number|null,
 paymentDate : Date
 }
