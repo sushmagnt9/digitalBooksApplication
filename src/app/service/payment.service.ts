@@ -13,14 +13,12 @@ export class paymentService {
 
   constructor(private http: HttpClient) { }
 
-  //Get all paymentDetails
   getAllPayment():Observable<Payment[]>{
       return this.http.get<Payment[]>(this.baseUrl);
   }
 
-  //Create Payment
   CreatePayment(payment: Payment):Observable<Payment[]> {
-   payment.paymentId = 0;//'00000000-0000-0000-0000-00000000000';
+   payment.paymentId = 0;
     return this.http.post<Payment[]>(this.baseUrl1, payment);
   }
 

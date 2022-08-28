@@ -12,7 +12,6 @@ export class signupService{
 
   constructor(private http: HttpClient) { }
 
-  //Add User
   User(usersignup : UserSignUp):Observable<UserSignUp[]>{
       return this.http.post<UserSignUp[]>(this.baseUrl, usersignup);
   }

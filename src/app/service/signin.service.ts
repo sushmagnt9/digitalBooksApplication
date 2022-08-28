@@ -12,7 +12,6 @@ export class signinService{
 
   constructor(private http: HttpClient) { }
 
-  //Validate User
   validateUser(user : User){
       return this.http.post<User>(this.baseUrl, user);
   }

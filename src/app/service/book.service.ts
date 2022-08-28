@@ -17,17 +17,14 @@ export class bookService {
 
   constructor(private http: HttpClient) { }
 
-  //Get all books
   getAllBooks():Observable<Book[]>{
       return this.http.get<Book[]>(this.baseUrl);
   }
 
-  //Add book
   CreateBook(book: Book):Observable<Book[]> {
-  //  book.bookId = 0;//'00000000-0000-0000-0000-00000000000';
     return this.http.post<Book[]>(this.baseUrl1, book);
   }
-  //Search books
+  
   SearchBooks(book: BookSearch):Observable<BookSearch[]>{
     let queryParams = new HttpParams();
     queryParams = queryParams.append("title",book.title);
