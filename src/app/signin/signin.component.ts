@@ -15,7 +15,8 @@ export class SigninComponent implements OnInit {
   user : User = {
     id:'',
     UserName:'',
-    Password:''
+    Password:'',
+    UserRole:''
   }
   constructor(private signinService : signinService,private router : Router){
   }
@@ -31,11 +32,12 @@ export class SigninComponent implements OnInit {
   response:any;
   ErrMsg=''
   onSubmit() {
-    if(this.user.UserName!=''&& this.user.Password!='' ){
+    if(this.user.UserName!=''&& this.user.Password!='' && this.user.UserRole=='Author'){
 
       this.signinService.validateUser(this.user)
       .subscribe(
         response => {
+          console.log(response);
           this.response = response;
           localStorage.setItem('response',this.response.response,)
           if(this.response.token=='')
