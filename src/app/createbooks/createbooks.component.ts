@@ -39,32 +39,6 @@ active:true,
  }
 
   }
-  // onSubmit(){
-  //   if(this.book.bookId===''){
-  //     this.bookService.CreateBook(this.book)
-  //     .subscribe(
-  //       response => {
-  //         this.CreateBook();
-  //         this.book = {
-  //          bookId:'',
-  //          logo:'',
-  //          title:'',
-  //          category:'',
-  //          price:'',
-  //          authorId:'',
-  //          publisher:'',
-  //          publishesDate:'',
-  //          content:'',
-  //          active:'',
-  //          createdDate:'',
-  //          modifiedDate:''
-  //         };
-  //       }
-  //     );
-  //   }
-  //   else{
-  //     this.updateBook(this.book);
-  //   }    
-  // }
+  
 
 
