@@ -13,6 +13,7 @@ export class bookService {
   baseUrl1 = 'https://localhost:7030/Book/CreateBook';
   baseUrl2 = 'https://localhost:7030/Book/SearchBooks';
   baseUrl3 = 'https://localhost:7030/Book/bookId';
+  
 
   constructor(private http: HttpClient) { }
 
@@ -42,6 +43,6 @@ export class bookService {
   }
 
   updateBook(book: Book):Observable<Book>{
-    return this.http.put<Book>(this.baseUrl +'/'+book.bookId,book);
+    return this.http.put<Book>(this.baseUrl ,book);
   }
 }

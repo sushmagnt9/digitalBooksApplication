@@ -9,20 +9,21 @@ import { bookService } from '../service/book.service';
 })
 export class BooksComponent implements OnInit {
   title = 'books';
+  ShowFields:Boolean=false;
+  Showgrid:Boolean=true;
   books:Book[] = [];
-  // book : Book = {
-  //   BookId:0,
-  //   Logo:'',
-  //   Title:'',
-  //   UserId: null,
-  //   Category:'',
-  //   AuthorName:'',
-  //   Price:'',
-  //   Publisher:'',
-  //   PublishedDate:new Date(),
-  //   Active:true,
-  //   Content:''
-  // }
+  book : Book = {
+    bookId:0,
+    logo:'',
+    title:'',
+    category:'',
+    authorName:'',
+    price:'',
+    publisher:'',
+    publishedDate:new Date(),
+    active:true,
+    content:''
+  }
 
   constructor(private bookService : bookService){
   }
@@ -34,16 +35,24 @@ export class BooksComponent implements OnInit {
   getAllBooks() {
     this.bookService.getAllBooks()
     .subscribe(
-      response => { this.books = response}
+      response => { 
+        this.books = response
+        this.Showgrid=true;
+        this.ShowFields=false;
+      }
     );
   }
   onSubmit(book:any){
-    this.books = book ;
+    this.Showgrid=false;
+    this.ShowFields=true;
+    this.book = book ;
   }
   updateBook(book: Book){
+    console.log(book);
        this.bookService.updateBook(book)
        .subscribe(
          response => {
+         
            this.getAllBooks();
          }
        )
