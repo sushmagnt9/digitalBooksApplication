@@ -37,6 +37,26 @@ export class BooksComponent implements OnInit {
       response => { this.books = response}
     );
   }
+  onSubmit(book:any){
+    this.books = book ;
+  }
+  updateBook(book: Book){
+       this.bookService.updateBook(book)
+       .subscribe(
+         response => {
+           this.getAllBooks();
+         }
+       )
+     }
+
+  deleteBook(bookId:number){
+    this.bookService.deleteBook(bookId)
+    .subscribe(
+      response => {
+        this.getAllBooks();
+      }
+    )
+  }
 
   // onSubmit(){
   //   if(this.books.BookId == 0){
@@ -52,14 +72,7 @@ export class BooksComponent implements OnInit {
   //   }    
   // }
 
-  // deleteBook(id:string){
-  //   this.bookService.deleteBook(id)
-  //   .subscribe(
-  //     response => {
-  //       this.getAllBooks();
-  //     }
-  //   )
-  // }
+   
 
   // populateForm(book: Book){
   //   this.book = book;

@@ -14,7 +14,7 @@
                   <th>category</th>
                   <th>content</th>
                   <th>active</th>
-                  <th>Delete</th>
+                  <th>Edit</th>
               </tr>
           </thead>    
           <tbody>
@@ -30,7 +30,9 @@
                   <td>{{book.category}}</td>
                   <td>{{book.content}}</td>
                   <td>{{book.active}}</td>
-                  <td><a [routerLink]="['/Deletebooks',book.bookId]" class="btn btn-danger">Delete</a></td>
+                   <td><a (click)='onSubmit(book)' class="btn btn-danger">Edit</a></td> 
+                  <!-- <a (click)='onSubmit()'>Delete</a> -->
+                  <!-- <a (click)='onSubmit()'></a> -->
                   <td><a  routerLink="/Books"></a></td>
               </tr>
           </tbody>        
