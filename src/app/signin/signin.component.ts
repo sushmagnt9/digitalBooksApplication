@@ -50,7 +50,27 @@ export class SigninComponent implements OnInit {
           this.router.navigate(['/Books']);
         }
       )
-      }else{
+      }
+      else if(this.user.UserName!='' && this.user.Password!='' && this.user.UserRole == 'Reader')
+      {
+        this.signinService.validateUser(this.user)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.response = response;
+          localStorage.setItem('response',this.response.response,)
+        if(this.response.token=='')
+          {
+            alert('Login failed');
+            this.ErrMsg='Login failed';
+            return;
+          }
+          alert('Login Sucess');
+          this.router.navigate(['/Payment']);
+      }
+      )
+    }
+      else{
         console.log('Login failed');
       }
   }
