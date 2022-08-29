@@ -20,5 +20,6 @@ export class GetpaymentComponent implements OnInit {
     .subscribe(
       response => { this.payments = response}
     );
+    return this.payments.filter(Payment => Payment.buyerEmail);
   }
 }
