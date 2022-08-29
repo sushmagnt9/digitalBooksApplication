@@ -7,9 +7,12 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="Password" [(ngModel)]="user.Password">
           
-            <label for="userRole"><b>UserRole</b></label>
-            <input type="text" placeholder="Enter UserRole" name="Password" [(ngModel)]="user.UserRole">
-          
+            <label for="UserRole"><b>UserRole</b></label>
+            <select name="Roles" id="UserRole" [(ngModel)]="user.UserRole">
+              <option value="Author">Author</option>
+              <option value="Reader">Reader</option>
+            </select>
+
           <div class="form-group">
             <a  (click)="onSubmit()" type="button" class="btn btn-primary">Login</a>
           </div>
