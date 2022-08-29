@@ -37,9 +37,11 @@ export class SignupComponent implements OnInit {
       this.signupService.User(this.usersignup)
       .subscribe(
         response => {
+          console.log(response);
           this.response = response;
+          alert('Signup sucess');
           this.ErrMsg = 'Signup sucess';
-          this.router.navigate(['/Signin'])
+          return;
           // if(this.response.UserRole=='Author')
           // {
           //   this.router.navigate(['/createbooks']);
